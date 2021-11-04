@@ -1,18 +1,10 @@
-alias l 'exa'
-alias ll 'exa_git'
-alias la 'exa $EXA_STANDARD_OPTIONS $EXA_LA_OPTIONS'
-alias ld 'exa $EXA_STANDARD_OPTIONS $EXA_LD_OPTIONS'
-alias lg 'exa $EXA_STANDARD_OPTIONS $EXA_LG_OPTIONS'
-alias le 'exa $EXA_STANDARD_OPTIONS $EXA_LE_OPTIONS'
-alias lt 'exa $EXA_STANDARD_OPTIONS $EXA_LT_OPTIONS'
-
 function __fish_exa_install --on-event fish-exa_install
-    set -Ux EXA_STANDARD_OPTIONS "--long" "--all" "--group" "--header"
-    set -Ux EXA_LA_OPTIONS "--binary" "--links" "--inode" "--blocks"
-    set -Ux EXA_LD_OPTIONS "--list-dirs"
-    set -Ux EXA_LG_OPTIONS "--git"
-    set -Ux EXA_LE_OPTIONS "--extended"
-    set -Ux EXA_LT_OPTIONS "--tree" "--level"
+    set -U EXA_STANDARD_OPTIONS "--git" "--header" "--icons"
+    set -U EXA_LL_OPTIONS "--long" "--group" "--extended"
+    set -U EXA_LA_OPTIONS "--all" "--binary" "--links" "--inode" "--blocks"
+    set -U EXA_LD_OPTIONS "--list-dirs"
+    set -U EXA_LE_OPTIONS "--extended" "--created" "--modified" "--accessed" "--changed"
+    set -U EXA_LT_OPTIONS "--tree" "--level"
 end
 
 function __fish_exa_update --on-event fish-exa_update
@@ -22,12 +14,13 @@ end
 
 function __fish_exa_uninstall --on-event fish-exa_uninstall
     set --erase EXA_STANDARD_OPTIONS
+    set --erase EXA_LL_OPTIONS
     set --erase EXA_LA_OPTIONS
     set --erase EXA_LD_OPTIONS
-    set --erase EXA_LG_OPTIONS
     set --erase EXA_LE_OPTIONS
     set --erase EXA_LT_OPTIONS
     functions --erase l
+    # We don't erase ls here because it could be the system ls and it doesn't need any options
     functions --erase ll
     functions --erase exa_git
     functions --erase la

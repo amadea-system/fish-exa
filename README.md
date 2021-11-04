@@ -8,11 +8,12 @@
 Install using Fisher:
 
 ```console
-fisher install gazorby/fish-exa
+fisher install xaocon/fish-exa
 ```
 
 ## 🔧 Usage
 
+# TODO: update this
 ### Aliases
 alias | default options
 ------|-------
