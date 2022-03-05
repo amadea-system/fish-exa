@@ -13,12 +13,6 @@ function __fish_exa_update --on-event fish-exa_update
 end
 
 function __fish_exa_uninstall --on-event fish-exa_uninstall
-    set --erase EXA_STANDARD_OPTIONS
-    set --erase EXA_LL_OPTIONS
-    set --erase EXA_LA_OPTIONS
-    set --erase EXA_LD_OPTIONS
-    set --erase EXA_LE_OPTIONS
-    set --erase EXA_LT_OPTIONS
     functions --erase l
     functions --erase la
     functions --erase lad
@@ -30,4 +24,10 @@ function __fish_exa_uninstall --on-event fish-exa_uninstall
     # We don't erase ls here because it could be the system ls and it doesn't need any options
     functions --erase lt
     
+    set --erase EXA_STANDARD_OPTIONS
+    set --erase EXA_LL_OPTIONS
+    set --erase EXA_LA_OPTIONS
+    set --erase EXA_LD_OPTIONS
+    set --erase EXA_LE_OPTIONS
+    set --erase EXA_LT_OPTIONS
 end
