@@ -3,6 +3,11 @@
 ## ✅ Requirements
 - [Fisher](https://github.com/jorgebucaran/fisher) 4.0+
 
+## Important Information!
+This fork is for my primarily customization purposes. 
+It may not work for you if you try it.
+I *may* or *may not* respond to issues/pull requests depending on my current mental state.
+
 ## 🚀 Install
 
 Install using Fisher:
