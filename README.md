@@ -13,7 +13,7 @@ I *may* or *may not* respond to issues/pull requests depending on my current men
 Install using Fisher:
 
 ```console
-fisher install xaocon/fish-exa
+fisher install amadea-system/fish-exa
 ```
 
 ## 🔧 Usage
