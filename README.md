@@ -18,17 +18,55 @@ fisher install amadea-system/fish-exa
 
 ## 🔧 Usage
 
-# TODO: update this
+### Aliases Descriptions
+
+- `ls`: Plain `exa`. (Absolutely no default arguments applied)
+- `l`: Shortcut for `exa --git --header`
+  - The default arguments don't do anything unless you add `-l`
+- `ll`: Display extended file information in a table - `ls -l`
+- `la`: Display extended file information in a table, including hidden files - `ls -la`
+- `ld`: Display only directories
+- `le`: Display all extended file information in a table.
+  - This adds the following headers: "Group", "Date Changed", "Date Created", "Date Accessed"
+- `lt`: Displays a file tree with the specified number of levels.
+  - Requires the desired number of levels as first argument
+- `lld`: Display only directories in a table with extended information.
+  - This is a combination of `ll` and `ld`
+- `lad`: Display only directories (including hidden dir) in a table with extended information.
+  - This is a combination of `la` and `ld`
+- `llt`: Displays an extended file tree in a table with the specified number of levels
+  - Requires the desired number of levels as first argument
+  - This is a combination of `ll` and `lt`
+
 ### Aliases
-alias | default options
-------|-------
-`l` | `exa`
-`ll` | `exa --long --all --group --header --git` if in git repo else `exa --long --all --group --header`
-`la` | `exa --long --all --group --header --binary --links --inode --blocks`
-`ld` | `exa --long --all --group --header --list-dirs`
-`lg` | `exa --long --all --group --header --git`
-`le` | `exa --long --all --group --header --extended`
-`lt` | `exa --long --all --group --header --tree --level LEVEL`
+
+| alias | default options                                                                                  |
+| ----- | ------------------------------------------------------------------------------------------------ |
+| `ls`  | `exa`                                                                                            |
+| `l`   | `exa --git --header`                                                                             |
+| `ll`  | `exa --git --header --long --icons`                                                              |
+| `la`  | `exa --git --header --long --icons --all`                                                        |
+| `ld`  | `exa --git --header --only-dirs`                                                                 |
+| `le`  | `exa --git --header --long --icons --extended --group --created --modified --accessed --changed` |
+| `lt`  | `exa --git --header --tree --level LEVEL`                                                        |
+| `lld` | `exa --git --header --long --icons --only-dirs`                                                  |
+| `lad` | `exa --git --header --long --icons --all --only-dirs`                                            |
+| `llt` | `exa --git --header --long --icons --tree --level LEVEL`                                         |
+
+Currently, the `--git` option is always applied w/ aliases that list it regardless of the current directory's git repository status.
+
+### Original Aliases Documentation
+
+| alias            | default options                                                        |
+| ---------------- | ---------------------------------------------------------------------- |
+| `l`              | `exa`                                                                  |
+| `ll`             | `exa --long --all --group --header`                                    |
+| `ll` in git repo | `exa --long --all --group --header --git`                              |
+| `la`             | `exa --long --all --group --header --binary --links --inode --blocks`  |
+| `ld`             | `exa --long --all --group --header --list-dirs`                        |
+| `lg`             | `exa --long --all --group --header --git`                              |
+| `le`             | `exa --long --all --group --header --extended`                         |
+| `lt`             | `exa --long --all --group --header --tree --level LEVEL`               |
 
 ## 🛠 Configuration
 
