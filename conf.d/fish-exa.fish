@@ -31,6 +31,20 @@ function __fish_exa_uninstall --on-event fish-exa_uninstall
     functions --erase llt
     functions --erase ls
     functions --erase lt
+
+    # At least when we are using pre-created ../function/*.fish files, 
+    # funcsave is not necessary as fisher will handle removing the files.
+    
+    # funcsave l
+    # funcsave la
+    # funcsave lad
+    # funcsave ld
+    # funcsave le
+    # funcsave ll
+    # funcsave lld
+    # funcsave llt
+    # funcsave ls
+    # funcsave lt
     
     set --erase EXA_STANDARD_OPTIONS
     set --erase EXA_LL_OPTIONS
