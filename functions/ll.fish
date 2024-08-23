@@ -1,3 +1,3 @@
 function ll --description 'exa with $EXA_STANDARD_OPTIONS $EXA_LL_OPTIONS'
-  exa $EXA_STANDARD_OPTIONS $EXA_LL_OPTIONS $argv; 
+  $__FISH_EXA_BINARY $EXA_STANDARD_OPTIONS $EXA_LL_OPTIONS $argv; 
 end

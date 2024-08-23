@@ -1,4 +1,12 @@
 function __fish_exa_install --on-event fish-exa_install
+
+    # Prefer eza as exa is unmaintained
+    if type -q eza
+        set -Ux __FISH_EXA_BINARY eza
+    else
+        set -Ux __FISH_EXA_BINARY exa
+    end
+
     set -U EXA_STANDARD_OPTIONS "--git" "--header"              # "--icons"
     set -U EXA_LL_OPTIONS "--long" "--icons"                    # "--group"
     set -U EXA_LA_OPTIONS "--all" "--long" "--icons"            # "--binary" "--links" "--inode" "--blocks"

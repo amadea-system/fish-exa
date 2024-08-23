@@ -1,3 +1,3 @@
 function ls --wraps=exa --description 'plain exa'
-  exa $argv; 
+  $__FISH_EXA_BINARY $argv; 
 end
