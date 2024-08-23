@@ -21,7 +21,7 @@ function __fish_exa_uninstall --on-event fish-exa_uninstall
     functions --erase ll
     functions --erase lld
     functions --erase llt
-    # We don't erase ls here because it could be the system ls and it doesn't need any options
+    functions --erase ls
     functions --erase lt
     
     set --erase EXA_STANDARD_OPTIONS
